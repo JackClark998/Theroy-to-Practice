@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Theory to Practice | Jack A Clark</title>
+
+        <meta charset="utf-8">
+        <meta name="author" content="Jack A Clark">
+        <meta name="description" content="A simple table containing calls and responses from 3 different APIs">
+        <meta name="keywords" content="api, html, learning">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="favicon.ico" rel="icon">
+        <link rel="stylesheet" type="text/css" href="libs/vendors/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="libs/css/styles.css">
+
+    </head>
+
+    <body>
+
+        <div class="main">
+            
+            <table>
+
+                <tr>
+                    <th>API</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>Recent Earthquakes</td>
+                    <td>Returns recent most powerful Earthquake</td>
+                    <td><button id="btnSubmitEarthquakeApi">Submit</button></td>
+                </tr>
+
+                <tr>
+                    <td>Neighbours</td>
+                    <td>Returns the neighbouring countries to given country ISO: 
+                        <input type="text" id="neighbourIsoInput" value="GB">
+                    </td>
+                    <td><button id="btnSubmitNeighbourApi">Submit</button></td>
+                </tr>
+
+                <tr>
+                    <td>Oceans</td>
+                    <td>Return the ocean or sea for given latitude and longitude
+                        <input type="number" id="oceanLatInput" value=40.78343>
+                        <input type="number" id="oceanLngInput" value=-43.96625>
+                    </td>
+                    <td><button id="btnSubmitOceanApi">Submit</button></td>
+                </tr>
+
+            </table>
+
+            <div class="resultsDiv">
+                <h1>Results</h1>
+                <div id="earthquakeResults">
+
+                    <table>
+                        <tr>
+                            <td>Datetime:</td>
+                            <td id="datetimeVal"></td>
+                        </tr>
+                        <tr>
+                            <td>Magnitude:</td>
+                            <td id="magnitudeVal"></td>
+                        </tr>
+                        <tr>
+                            <td>Depth:</td>
+                            <td id="depthVal"></td>
+                        </tr>
+                        <tr>
+                            <td>Latitude:</td>
+                            <td id="latitudeVal"></td>
+                        </tr>
+                        <tr>
+                            <td>Longitude:</td>
+                            <td id="longitudeVal"></td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div id="neighbourResults">
+                    <table>
+                        <tr>
+                            <td>Neighbouring Countries:</td>
+                            <td id="neighbouringCountriesVal"></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="oceanResults">
+                    <table>
+                        <tr>
+                            <td>Ocean:</td>
+                            <td id="oceanResult"></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="libs/vendors/jquery/jquery-3.5.1.min.js"></script>
+        <script src="libs/vendors/bootstrap/bootstrap.min.js"></script>
+        <script src="libs/js/script.js"></script>
+
+    </body>
+
+</html>
